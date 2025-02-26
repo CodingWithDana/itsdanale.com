@@ -1,0 +1,47 @@
+/* Body */
+body {
+    font-family: Nunito, Arial;
+    font-size: 25px;
+    background-color:#f29bb4;
+}
+
+h1 {
+    width: 240px;
+    font-style: italic;
+    font-family: Nunito, Arial;
+    font-size: 40px;
+    font-weight: bold;
+    color:black;
+}
+
+p {
+    
+}
+
+.container {
+    display: flex;
+    height: 600px;
+    border: 3px solid pink;
+}
+
+.content {
+    flex: 1; /* Takes 50% of the width */
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 100px;
+    padding-bottom: 10px;
+}
+
+.photo {
+    display:flex;
+    flex: 1; /* Takes 50% of the width */
+    align-items: left;
+    padding-top: 50px;
+}
+
+.photo img {
+    height: 500px;
+    width: 400px;
+    border: 1px dotted yellow;
+    border-radius: 5px;
+}
