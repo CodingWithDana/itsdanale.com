@@ -1,47 +1,181 @@
-/* Body */
+/* body */
 body {
-    font-family: Nunito, Arial;
-    font-size: 25px;
-    background-color:#f29bb4;
+    font-family: Nunito, sans-serif;
+    background: #e1b1e7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-h1 {
-    width: 240px;
-    font-style: italic;
-    font-family: Nunito, Arial;
-    font-size: 40px;
-    font-weight: bold;
-    color:black;
-}
 
-p {
-    
-}
-
+/* container */
 .container {
     display: flex;
-    height: 600px;
-    border: 3px solid pink;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+    overflow-x: hidden;
+    flex-wrap: wrap;
 }
 
-.content {
-    flex: 1; /* Takes 50% of the width */
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 100px;
-    padding-bottom: 10px;
+/* bio content */
+.bio-content {
+    display: flex;
+    background-color: #eb93c6;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
 }
 
+/* bio text */
+.bio-text {
+    width: 50%;
+    flex: 1;
+    padding-right: 20px;
+}
+
+.bio-text h1 {
+    font-size: 60px;
+    color: #050505;
+}
+
+.bio-text p {
+    font-size: 20px;
+    color: #100f0f;
+    margin-bottom: 15px;
+}
+
+/* Contact Info */
+.contact-info {
+    display: flex; /* Ensures all icons are in one row */
+    align-items: center; /* Aligns icons vertically */
+    justify-content: start; /* Aligns icons to the left */
+    gap: 20px; /* Adds space between icons */
+    margin-top: 40px;
+}
+
+.linkedln-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #020202;
+    transition: transform 0.2s ease-in-out;
+}
+
+.github-icon {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    color: #020202;
+    transition: transform 0.2s ease-in-out;
+}
+
+.gmail-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    color: #171515;
+    vertical-align: middle;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+/* Gmail Tooltip */
+.gmail-btn {
+    position: relative;
+    font-size: 25px;
+    cursor: pointer;
+    color: #3a2d27;
+    transition: transform 0.2s ease-in-out;
+}
+
+.gmail-btn:hover {
+    transform: scale(1.2);
+}
+
+.email-tooltip {
+    visibility: hidden;
+    background-color: #3a2d27;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.gmail-btn:hover .email-tooltip {
+    visibility: visible;
+}
+
+/* profile photo */
 .photo {
-    display:flex;
-    flex: 1; /* Takes 50% of the width */
-    align-items: left;
-    padding-top: 50px;
+    width: 50%;
 }
 
 .photo img {
-    height: 500px;
-    width: 400px;
-    border: 1px dotted yellow;
-    border-radius: 5px;
+    max-width: 300px;
 }
+
+/* welcome-message styling */
+.welcome-message {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ede748;
+    font-style: italic;
+    z-index: 1000; /* Ensures it's above other elements */
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInSlide 1s ease-out forwards;
+}
+
+.welcome-message::after {
+    content: " ☕️";
+    font-size: 1.2em;
+} 
+
+/* Animation for welcome-message */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* wave styling */
+.wave {
+    font-size: 3rem;
+    display: inline-block;
+    animation: wave 1.5s infinite;
+}
+
+/* Animations for wave */
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(15deg); }  /* Move forward */
+    40% { transform: rotate(-5deg); }  /* Slight back motion */
+    60% { transform: rotate(10deg); }  /* Forward again */
+    80% { transform: rotate(-2deg); }  /* Small backward move */
+    100% { transform: rotate(0deg); }  /* Back to normal */
+}
+
