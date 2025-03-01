@@ -75,13 +75,16 @@ body {
         margin-top: 50px;
     }
 
-    .linkedln-icon {
+    .linkedin-icon {
         width: 40px;
         height: 40px;
         border-radius: 5px;
         cursor: pointer;
         color: #020202;
-        transition: transform 0.2s ease-in-out;
+    }
+
+    .linkedin-icon:hover {
+        transform: scale(1.5);
     }
 
     .github-icon {
@@ -89,35 +92,25 @@ body {
         height: 35px;
         cursor: pointer;
         color: #020202;
-        transition: transform 0.2s ease-in-out;
     }
 
-    .gmail-icon {
+    .github-icon:hover {
+        transform: scale(1.5);
+    }
+
+    .email-icon {
         width: 40px;
         height: 40px;
         cursor: pointer;
         color: #171515;
         vertical-align: middle;
-        transition: transform 0.2s ease-in-out;
     }
 
-    .icon:hover {
-        transform: scale(1.2);
+    .email-btn:hover {
+        transform: scale(1.5);
     }
 
-    /* Gmail Tooltip */
-    .gmail-btn {
-        position: relative;
-        font-size: 25px;
-        cursor: pointer;
-        color: #3a2d27;
-        transition: transform 0.2s ease-in-out;
-    }
-
-    .gmail-btn:hover {
-        transform: scale(1.2);
-    }
-
+    /* Email Tooltip */
     .email-tooltip {
         visibility: hidden;
         background-color: #3a2d27;
@@ -133,7 +126,7 @@ body {
         font-size: 14px;
     }
 
-    .gmail-btn:hover .email-tooltip {
+    .email-btn:hover .email-tooltip {
         visibility: visible;
     }
 }
